@@ -1,0 +1,109 @@
+{
+    "details": [
+        {
+            "id": "item-0",
+            "name": "testtext",
+            "show": true,
+            "type": "Text",
+            "types": [
+                "product"
+            ],
+            "values": ""
+        },
+        {
+            "id": "item-1",
+            "name": "testtextarea",
+            "show": true,
+            "type": "Textarea",
+            "types": [
+                "product"
+            ],
+            "values": ""
+        },
+        {
+            "id": "item-2",
+            "name": "cvsdcs",
+            "show": true,
+            "type": "Richtext Editor",
+            "types": [
+                "product"
+            ],
+            "values": ""
+        },
+        {
+            "id": "item-3",
+            "name": "csdcscs",
+            "show": true,
+            "type": "Select",
+            "types": [
+                "product"
+            ],
+            "values": "a,b,c"
+        },
+        {
+            "id": "item-4",
+            "name": "cdscsdc",
+            "show": true,
+            "type": "Multiselect",
+            "types": [
+                "product"
+            ],
+            "values": "a,b,c"
+        },
+        {
+            "id": "item-5",
+            "name": "checkboxtest",
+            "show": true,
+            "type": "Checkbox",
+            "types": [
+                "product"
+            ]
+        },
+        {
+            "id": "item-6",
+            "name": "sddssdvsdvv",
+            "show": true,
+            "type": "Number",
+            "types": [
+                "product"
+            ],
+            "values": ""
+        },
+        {
+            "id": "item-7",
+            "name": "greg",
+            "show": true,
+            "type": "Date",
+            "types": [
+                "product"
+            ],
+            "values": "",
+            "tooltip": "trhh"
+        },
+        {
+            "id": "item-8",
+            "name": "testinguser",
+            "show": true,
+            "type": "User picker",
+            "types": [
+                "product"
+            ],
+            "values": []
+        },
+        {
+            "id": "item-9",
+            "name": "dcsdc",
+            "show": true,
+            "type": "Cascading Input",
+            "types": [
+                "product"
+            ]
+        },
+        {
+            "id": "item-10",
+            "type": "Currency",
+            "show": true,
+            "name": "sdcbsrw"
+        }
+    ]
+}
