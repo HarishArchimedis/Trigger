@@ -12,6 +12,7 @@ RPA
     ${res}    Get Request    jack    /api/users/2
     Status Should Be    200
     Log    ${res}
+    Log    ${res}
 
 
 
