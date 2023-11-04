@@ -22,7 +22,7 @@ marks
 *** Test Cases ***
 Kanishka student result
     marks    123456    01/02/1997
-    marks    978987    14/12/2000
+    marks    978987    14/12/20002
     
 
 
