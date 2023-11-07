@@ -3,6 +3,8 @@ Library    RequestsLibrary
 Library    JSONLibrary
 Library    OperatingSystem
 Library    SeleniumLibrary
+Library    String
+Library    Collections
 
 *** Variables ***
 ${urlses}    https://dev-nexus.eat.jnj.com
@@ -19,7 +21,7 @@ marks
     Click Element    //input[@value="Get Marks"]
     Capture Page Screenshot
     Close Browser
-*** Test Cases ***
+# *** Test Cases ***
 Kanishka student result
     marks    123456    01/02/1997
     marks    978987    14/12/20002
@@ -56,61 +58,11 @@ Gsgcjsh
     # Log    ${body}
     # PUT On Session
     # ${emp}    Create List    ${EMPTY}
-    ${kncsk}    Create List    product    non-product-group    platform-group    product-group    enabling-function    chapter    chapter-group    non-product    platform
-    
-    ${dic1}    Create Dictionary    name=harish    id=1090    age=23    value=${EMPTY}    #ha=@{kncsk}
-    ${dic2}    Create Dictionary    name=vvv    id=vfv    age=45    value=${EMPTY}    ha=@{kncsk}
-    ${fina}    Dump Json To File    jdvjv.json    ${dic1} 
-    # Log    ${emp}    ${dic}
-    # @{eded}    Create List    ${dic1}    ${dic2}
-    # Log    ${eded}
-    # ${replace}=    Evaluate    json.dumps($dic1,$dic2)    json
-    # Log    ${replace}
-
-    # ${body}=    Set Variable   {"details": [${replace}]}
-    
-    # Log    ${body}
-    # FOR    ${element}    IN    @{LIST}
-    #     Log    ${element}
-        
-    # END
-
-    # ${list1}=    Create List    StringA1    StringA2
-    # ${list2}=    Create List    StringB1    StringB1
-    # ${Dictionary}=    Create Dictionary    A=${list1}    B=${list2}
-    # # Log    ${Dictionary}
-
-    # ${checkbox}    Create List    product    non-product-group    platform-group    product-group    enabling-function    chapter    chapter-group    non-product    platform    enabling-function-group
-
-    
-*** Test Cases ***
-chih
-    # ${cdncn}    Get File    C:/RF_Local/custom1.json
-    ${dic1}    Create Dictionary    type=Text    name=testtext    id=item-0    age=23    value=${EMPTY}
-    ${dic2}    Create Dictionary    type=Textarea    name=testtextarea    id=item-1     age=6    value=${EMPTY}
-    ${dic3}    Create Dictionary    type=Rich    name=select    id=item-2     age=5    value=${EMPTY}
-    ${dic4}    Create Dictionary    type=Select    name=multi    id=item-3   age=3    value=${EMPTY}
-    
-    
-    @{dd}    Create List    ${dic1}    ${dic2}    ${dic3}    ${dic4}
-    FOR    ${element}    IN    @{dd}
-        ${replace}    Evaluate    json.dumps($dd)    json
-        
-        
-    END
-    ${body}    Set Variable   {"details": ${replace}}
-    Log    ${body}
-    
-*** Keywords ***
-
-
-Json
-    [Arguments]    ${uuid}    ${custom_type}
-    ${Text_Type}    Create Dictionary    id=item-0   name=Testtext    type=Text    show=True      values=${EMPTY}     default_value=a,b,c    mandatory=True    tooltip=Testtool
-    ${Textarea_Type}    Create Dictionary    id=item-1   name=Testtextarea    type=Textarea    show=True      values=${EMPTY}     default_value=a,b,c    mandatory=True    tooltip=Testtool
-    ${Rich_Type}    Create Dictionary    id=item-2   name=TestRich    type=Richtext Editor    show=True      values=${EMPTY}     default_value=a,b,c    mandatory=True    tooltip=Testtool
-    ${Select_Type}    Create Dictionary    id=item-3   name=TestSelect    type=Select    show=True      values=a,b,c    default_value=a    mandatory=True    tooltip=Testtool
-    ${Multiselect_Type}    Create Dictionary    id=item-4   name=TestMultiselect    type=Multiselect    show=True      values=a,b,c    default_value=a,b    mandatory=True    tooltip=Testtool
-    ${Check_Type}    Create Dictionary    id=item-5   name=TestCheck    type=Checkbox    show=True      values=a,b,c    default_value=a,b    mandatory=True    tooltip=Testtool
-    ${Number_Type}    Create Dictionary    id=item-6   name=TestNumber    type=Number    show=True      values=${EMPTY}   default_value=8989890    mandatory=True    tooltip=Testtool
-    
+    #${kncsk}    Create List    product    non-product-group    platform-group    product-group    enabling-function    chapter    chapter-group    non-product    platform
+*** Tasks ***
+automation
+    ${dic}    Create Dictionary    name=ABC    id=1234
+    ${dic_data}    Evaluate    json.dumps($dic)    json
+    Log    ${dic_data}
+    ${mncd}    Add Object To Json    hd    int=hjhj    object_to_add
+       
